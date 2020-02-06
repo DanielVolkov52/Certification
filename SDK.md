@@ -1,58 +1,56 @@
 # Вопросы
-## CAD Exchanger
-1. Which products are part of the CAD Exchanger offering? Which typical use cases does each product serve?
-2. What is included into the packages delivered to customers?
-3. Which platforms are officially supported by each product?
-4. Which license types are supported?
-5. Key customers and projects.
-6. How are CAD Exchanger products documented. How is documentation made available to users?
-7. Which file formats are supported by CAD Exchanger?
-8. What kind of data do 3D formats typically contain? Explain various data types and their purpose? Take two
-file formats and explain which data can be contained in each.
+## SDK
+1. Explain data model concepts – scene graph, properties, appearance, layers, etc.
+2. Part representations: restrictions of number of each type and why? How to convert between them?
+3. What is LOD? Why do we need them? How to find medium LOD? How to create a new LOD?
+4. Appearances: Which objects in data model can bear appearances? Priority of appearances attached to
+various objects?
+5. Write code to find unique parts for a given model.
+6. General architecture of import workflow. Key classes and their roles. For a given format (e.g. JT, Parasolid,
+ACIS, etc.) explain workflow.
+7. Validation properties. What are these? Why? Which are supported by CAD Exchanger?
+8. Interoperability with OCC (geometry, topology, XDE). How to convert to/from CAD Exchanger?
+9. Which debugging techniques are available (asserts, logging, DRAW, etc.)? Where each could be helpful? Give
+examples of usage. What would you add/extend and why?
+10. Explain test library usage. Explain creation of a new test / extension of existing – show examples of your
+created test cases and explain why you did that way.
+11. SDK public API. How is it separated from private API? Which classes are part of it.
+12. Are there direct mappings between formats (e.g. STEP to Para)? Why yes or why not?
 
-## CAD Exchanger
-1. Какие продукты входят в предложение CAD Exchanger? Какие типичные случаи использования обслуживает каждый продукт?
-2. Что входит в пакеты, поставляемые клиентам?
-3. Какие платформы официально поддерживаются каждым продуктом?
-4. Какие типы лицензий поддерживаются?
-5. Ключевые клиенты и проекты.
-6. Как документируются продукты CAD Exchanger. Как сделать документацию доступной для пользователей?
-7. Какие форматы файлов поддерживаются CAD Exchanger?
-8. Какие данные обычно содержат 3D-форматы? Объясните различные типы данных и их назначение? Приведите в пример два
-формата файлов и объясните, какие данные могут содержаться в каждом из них.
+## SDK
+1. Объясните понятия модели данных-граф сцены, свойства, внешний вид, слои и т. д.
+2. Представления частей: ограничения числа каждого типа и почему? Как конвертировать между ними?
+3. Что такое Лод? Зачем они нам нужны? Как найти среднего Лода? Как создать новый Лод?
+4. Внешние виды: какие объекты в модели данных могут иметь внешние виды? Приоритет внешних проявлений, прилагаемых к
+различные предметы?
+5. Напишите код для поиска уникальных деталей для данной модели.
+6. Общая архитектура процесса импорта. Ключевые классы и их роли. Для данного формата (например, JT, Parasolid,
+ACIS и др.) объясните рабочий процесс.
+7. Свойства проверки. Что это такое? Почему? Какие поддерживаются CAD-обменником?
+8. Взаимодействие с OCC (геометрия, топология, XDE). Как конвертировать в / из CAD-обменника?
+9. Какие методы отладки доступны (asserts, logging, DRAW и т. д.)? Где каждый из них может быть полезен? Дай
+пример использования. Что бы вы добавили / расширили и почему?
+10. Объясните использование библиотеки тестов. Объясните создание нового теста / расширение существующего-покажите примеры вашего
+создавал тестовые случаи и объяснял, почему вы так поступили.
+11. SDK public API. Как он отделен от private API? Какие классы являются его частью.
+12. Существуют ли прямые сопоставления между форматами (например, шаг к пункту)? Почему да или почему нет?
 
 # Ответы
 
 ## 1
-* SDK
-* GUI (Win, Lin, Mac)
-* WebToolKit
-* Cloud
-* CLI
-* Android
+https://cadexchanger.com/download/sdk/doc/dev/html/sdk_data_model_product_structure.html
 
 ## 2
-* Z:\Releases\3.7.1\12316
+   1. Brep 0/1
+   2. Polygonal 0/1+
+   3. https://cadexchanger.com/download/sdk/doc/dev/html/sdk_data_model_representations.html
 
 ## 3
-* SDK
-   1. Win x32 x64
-   2. Lin
-   3. MacOS
-* GUI
-   1. Win x32 x64
-   2. Lin
-   3. MacOS
-   4. Android
-* CLI
-   1. Win x32 x64
-   1. Lin
-   2. MacOS
+* https://cadexchanger.com/download/sdk/doc/dev/html/sdk_data_model_representations.html
+* https://cadexchanger.com/download/sdk/doc/dev/html/sdk_usage_meshing.html
 
 ## 4
-   1. Пробная eval
-   2. Бесконечная permanent
-   3. Подписка
+https://cadexchanger.com/download/sdk/doc/dev/html/sdk_data_model_styles.html
 
 ## 5
    1. Sener
